@@ -83,3 +83,22 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/*
+ * 缓存文件
+ * */
+define('MENUS_MODEL_CACHE', 'menus_model_cache');//数据库菜单对象数组数据模型文件名
+define('MENUS_CACHE', 'menus_cache');//树形结构菜单对象数组缓存文件名
+
+/*
+ * 错误码
+ * */
+define('REQUEST_SUCCESS', array('code'=>0, 'msg'=> '请求成功'));
+
+define('REQUEST_FAILED', array('code'=>10000, 'msg'=> '请求失败'));
+define('AUTH_FAILED', array('code'=>10001, 'msg'=>'登录状态已失效'));
+define('LOGIN_REQUIRED', array('code'=>10002, 'msg'=>'请先登录'));
+
+define('PARAMS_ERROR', array('code'=>20001, 'msg'=>'缺少参数或参数格式不正确'));
+define('USERNAME_NOT_EXISTS', array('code'=>20002, 'msg'=>'用户名不存在'));
+define('USERNAME_OR_PASSWORD_ERROR', array('code'=>20003, 'msg'=>'用户名或密码错误'));
