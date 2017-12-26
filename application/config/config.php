@@ -23,8 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//TODO:这里需要修改
-$config['base_url'] = 'http://www.xxx.com/';
+
+$config['base_url'] = 'http://'. $_SERVER['SERVER_NAME'] . '/';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ $config['base_url'] = 'http://www.xxx.com/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +80,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'zh_cn';
+$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -368,10 +369,10 @@ $config['encryption_key'] = '';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-//TODO:这里需要修改
+//TODO:根据需要修改,推荐使用数据库,也可用文件缓存
 $config['sess_driver'] = 'database';//数据库
 $config['sess_cookie_name'] = 'xx_session';
-$config['sess_expiration'] = 7200;
+$config['sess_expiration'] = 30 * 60; //单位:分钟
 $config['sess_save_path'] = 'xx_session';//对应的表
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
@@ -471,9 +472,6 @@ $config['time_reference'] = 'local';
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-
-//TODO:根据修改选择菜单样式
-$config['menu_type'] = 'sidebar';//菜单样式,默认为侧边栏菜单,顶部菜单栏则设置为'top'
 
 //时区设置
 date_default_timezone_set('Asia/ShangHai');

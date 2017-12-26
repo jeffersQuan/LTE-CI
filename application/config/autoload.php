@@ -58,7 +58,9 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'session');
+
+//TODO:配置数据库后根据需要添加,如'database', 'session'
+$autoload['libraries'] = array();
 
 /*
 | -------------------------------------------------------------------

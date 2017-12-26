@@ -70,28 +70,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
+//TODO:数据库配置
 $active_group = 'default';
 $query_builder = TRUE;
+$mysql_hostname = 'localmysql';
 
-//TODO:这里需要修改
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => (ENVIRONMENT == 'production'? 'localmysql' : '127.0.0.1'),
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);
+$db['default']['hostname'] = $mysql_hostname;
+$db['default']['username'] = "username";
+$db['default']['password'] = "password";
+$db['default']['database'] = "default";
+$db['default']['dbdriver'] = "mysqli";
+$db['default']['dbprefix'] = "";
+$db['default']['pconnect'] = FALSE;
+$db['default']['db_debug'] = (ENVIRONMENT !== 'production');
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = "";
+$db['default']['char_set'] = "utf8";
+$db['default']['dbcollat'] = "utf8_general_ci";

@@ -88,17 +88,40 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
  * 缓存文件
  * */
 define('MENUS_MODEL_CACHE', 'menus_model_cache');//数据库菜单对象数组数据模型文件名
-define('MENUS_CACHE', 'menus_cache');//树形结构菜单对象数组缓存文件名
+define('MENUS_CACHE', 'menus_cache');//当前条件下显示的树形结构菜单对象数组缓存文件名
+define('MENUS_ALL_CACHE', 'menus_all_cache');//完整的树形结构菜单对象数组缓存文件名
+define('MENUS_TREE_CACHE', 'menus_tree_cache');//树形结构菜单展开成一维数组缓存文件名
 
+define('ROLES_MODEL_CACHE', 'roles_model_cache');//数据库角色对象数组数据模型文件名
+define('PRIVILEGES_MODEL_CACHE', 'privileges_model_cache');//数据库权限对象数组数据模型文件名
+define('ROLE_PRIVILEGES_CACHE', 'role_privileges_cache');//各角色权限对象数组数据模型文件名
+define('ROLE_URLS_CACHE', 'role_urls_cache');//各角色权限对应url对象数组数据模型文件名
+define('ALL_URLS_CACHE', 'all_urls_cache');//所有权限对应url对象数组数据模型文件名
+define('USERS_MODEL_CACHE', 'users_model_cache');//数据库用户对象数组数据模型文件名
+
+define('DEBUG_MODE', FALSE);//是否是debug模式
+define('PAGE_SIZE', 20);//页面默认显示数据条数
 /*
  * 错误码
  * */
-define('REQUEST_SUCCESS', array('code'=>0, 'msg'=> '请求成功'));
+define('REQUEST_SUCCESS_CODE', 0);
+define('REQUEST_SUCCESS_MSG', '请求成功');
 
-define('REQUEST_FAILED', array('code'=>10000, 'msg'=> '请求失败'));
-define('AUTH_FAILED', array('code'=>10001, 'msg'=>'登录状态已失效'));
-define('LOGIN_REQUIRED', array('code'=>10002, 'msg'=>'请先登录'));
+define('REQUEST_FAILED_CODE', 10000);
+define('REQUEST_FAILED_MSG', '请求失败');
+define('AUTH_FAILED_CODE', 10001);
+define('AUTH_FAILED_MSG', '登录状态已失效');
+define('LOGIN_REQUIRED_CODE', 10002);
+define('LOGIN_REQUIRED_MSG', '请先登录');
+define('NO_PERMISSION_CODE', 10003);
+define('NO_PERMISSION_MSG', '没有权限');
+define('IS_LOCKED_CODE', 10004);
+define('IS_LOCKED_MSG', '帐号被禁用');
 
-define('PARAMS_ERROR', array('code'=>20001, 'msg'=>'缺少参数或参数格式不正确'));
-define('USERNAME_NOT_EXISTS', array('code'=>20002, 'msg'=>'用户名不存在'));
-define('USERNAME_OR_PASSWORD_ERROR', array('code'=>20003, 'msg'=>'用户名或密码错误'));
+
+define('PARAMS_ERROR_CODE', 20001);
+define('PARAMS_ERROR_MSG', '缺少参数或参数格式不正确');
+define('USERNAME_NOT_EXISTS_CODE', 20002);
+define('USERNAME_NOT_EXISTS_MSG', '用户名不存在');
+define('USERNAME_OR_PASSWORD_ERROR_CODE', 20003);
+define('USERNAME_OR_PASSWORD_ERROR_MSG', '用户名或密码错误');
